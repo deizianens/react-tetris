@@ -1,17 +1,19 @@
 import React from 'react';
+
 import Stage from './Stage';
 import Display from './Display';
 import Button from './Button';
+import { createStage } from '../helpers';
 
 const Tetris = () => {
   return (
     <div>
-      <Stage />
+      <Stage stage={createStage()} />
       <aside>
-        <Display>Score</Display>
-        <Display>Score</Display>
-        <Display>Score</Display>
-        <Button></Button>
+        <Display text='Score' />
+        <Display text='Rows' />
+        <Display text='Level' />
+        <Button />
       </aside>
     </div>
   );
